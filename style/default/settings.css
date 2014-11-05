@@ -1,0 +1,365 @@
+html,body {
+ overflow: hidden;
+ width: 100%;
+ background: url(bg.png);
+}
+.setting-menu li a,.setting-nav .selected-arr {
+ background: url("icons.png") no-repeat;
+}
+.setting-menu {
+ background: #fff;
+ box-shadow: 1px 0 1px rgba(0,0,0,0.1);
+ height: 100%;
+ position: absolute;
+ text-align: center;
+ width: 140px;
+}
+.setting-menu li {
+ cursor: pointer;
+ position: relative;
+}
+.setting-nav .selected-arr {
+ background-position: -320px -40px;
+ display: none;
+ height: 10px;
+ position: absolute;
+ right: -5px;
+ top: 10px;
+ width: 5px;
+}
+.setting-nav li a {
+ color: rgba(0,0,0,0.8);
+ display: block;
+ font-size: 14px;
+ margin-top: 55px;
+ opacity: .3;
+ padding-top: 35px;
+ webkit-transition: opacity .5s;
+}
+.setting-nav li:hover a {
+ opacity: .6;
+}
+.setting-nav li.selected .selected-arr {
+ display: block;
+}
+.setting-nav li.selected a {
+ opacity: .8;
+}
+.setting-nav li.general a {
+ background-position: 57px -400px;
+}
+.setting-nav li.accounts-s a {
+ background-position: -46px -400px;
+}
+.setting-nav li.notifications a {
+ background-position: -141px -400px;
+}
+.setting-menu .about {
+ bottom: 10px;
+ left: 0;
+ position: absolute;
+ right: 0;
+}
+.setting-menu .about i {
+ color: #999;
+ display: block;
+ font-size: 11px;
+ margin-top: 10px;
+}
+.setting-content {
+  margin-left: 140px;
+  padding: 40px 50px;
+  position: relative;
+}
+.setting-content h3 {
+ border-bottom: 1px solid rgba(0,0,0,0.1);
+ font-size: 14px;
+ font-weight: bold;
+ margin-bottom: 20px;
+ padding-bottom: 10px;
+}
+.setting-content .form td {
+ height: 45px;
+ padding: 0 40px 0 0;
+}
+.setting-content label {
+ margin-left: 5px;
+}
+.setting-content label span {
+  color: #999;
+}
+.setting-content .save-btn {
+ background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #fff), color-stop(1, #f2f2f2));
+ border: 1px solid #ccc;
+ border-radius: 3px;
+ box-shadow: 0px 0 0 rgba(0,0,0,0);
+ padding: 3px 10px;
+ text-align: center;
+ webkit-transition: box-shadow .2s linear;
+}
+.setting-content .save-btn:hover {
+ border: 1px solid #bbb;
+ box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
+.setting-content .save-btn:active {
+ box-shadow: 0px 1px 3px rgba(0,0,0,0.2) inset;
+}
+.setting-content .shortcut {
+ border: 1px solid #ccc;
+ border-radius: 3px;
+ box-shadow: 0 1px 1px rgba(0,0,0,0.1) inset;
+ color: #999;
+ height: 14px;
+ overflow: hidden;
+ padding: 5px;
+ text-align: center;
+ width: 150px;
+}
+.setting-content .acount-btn {
+ border-radius: 3px;
+ box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+ color: #fff;
+ cursor: pointer;
+ margin: 5px 10px 0 0;
+ padding: 3px 10px 3px 28px;
+ webkit-transition: box-shadow .2s linear;
+}
+.setting-content .acount-btn:hover {
+ box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+ webkit-transition: box-shadow .2s linear;
+}
+.setting-content .acount-btn.sina {
+ background: #c00 url("icons.png") no-repeat -72px -264px;
+ border: 1px solid #b30000;
+}
+.setting-content .acount-btn.qq {
+ background: gray url("icons.png") no-repeat -72px -239px;
+ border: 1px solid #666;
+}
+.setting-content .acounts-list {
+ margin-top: 20px;
+}
+.setting-content .acount-wrap {
+ background: #fff;
+ border-radius: 5px;
+ box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+ margin: 10px 0 0;
+ padding: 10px;
+ width: 180px;
+}
+.setting-content .tips {
+ color: #800;
+ margin-bottom: 0;
+}
+.setting-content .tips a {
+ color: #c00;
+ font-weight: bold;
+}
+.setting-content .weibo-select {
+ margin-bottom: 10px;
+ width: 100%;
+}
+.setting-content .card {
+ background: #fff;
+ border-radius: 5px;
+ box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+ height: 50px;
+ margin: 0 0 20px;
+ position: relative;
+ width: 200px;
+}
+.setting-content .card .avater {
+ border-radius: 5px 0 0 5px;
+}
+.setting-content .card .name {
+ left: 60px;
+ position: absolute;
+ top: 8px;
+}
+.setting-content .card .weibo-name {
+ color: #999;
+ left: 60px;
+ position: absolute;
+ top: 26px;
+}
+.setting-content .card .expired {
+ color: #F30;
+ position: absolute;
+ right: 5px;
+ top: 26px;
+}
+.setting-content .card .weibo-icon {
+ height: 16px;
+ opacity: .2;
+ position: absolute;
+ right: 5px;
+ top: 5px;
+ width: 20px;
+}
+.setting-content .card .sina,.setting-content .card .qq,.setting-content .card .delete {
+ background: url("icons.png") no-repeat;
+}
+.setting-content .card .sina {
+ background-position: -30px -240px;
+}
+.setting-content .card .qq {
+ background-position: 1px -240px;
+}
+.setting-content .card .delete {
+ background-position: -50px -100px;
+ height: 20px;
+ opacity: 0;
+ position: absolute;
+ right: -8px;
+ top: -7px;
+ webkit-transition: opacity .2s linear;
+ width: 20px;
+}
+.setting-content .card:hover .delete {
+ opacity: 1;
+}
+.setting-content .acount-select {
+ border-bottom: 1px solid rgba(0,0,0,0.1);
+ margin: 0 0 20px;
+ padding-bottom: 10px;
+}
+.setting-content .acount-select h4 {
+ margin: 0 0 5px;
+}
+.setting-content .acount-select select {
+ display: block;
+ margin: 0 0 7px -8px;
+ width: 130px;
+}
+.setting-content .acount-select .avater {
+ left: 50%;
+ margin-left: -15px;
+ position: absolute;
+ top: -15px;
+}
+.setting-content .acount-select .avater img {
+ border-radius: 30px;
+}
+.setting-content .acount-select .avater .mask {
+ border: 2px solid #fff;
+ border-radius: 30px;
+ box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+ height: 28px;
+ left: -1px;
+ position: absolute;
+ top: -1px;
+ width: 28px;
+}
+.setting-content .result {
+ background: #3CB300;
+ color: #fff;
+ display: inline-block;
+ margin-left: 5px;
+ padding: 0 5px;
+}
+.setting-content .i-radio label {
+ background-image: url(icons.png);
+ display: inline-block;
+ height: 13px;
+ margin-right: 10px;
+ width: 28px;
+}
+.setting-content .pic-left {
+ background-position: -150px -250px;
+}
+.setting-content .pic-right {
+ background-position: -200px -250px;
+}
+.setting-content .pic-big {
+ background-position: -250px -250px;
+}
+.setting-content .pic-none {
+ background-position: -300px -250px;
+}
+input.number {
+ border: 0 none;
+ font-size: 13px;
+ text-align: center;
+ width: 50px;
+ background: transparent;
+}
+.lessen,.increase {
+ background: url(icons.png) no-repeat;
+ border: 0 none;
+ cursor: pointer;
+ height: 22px;
+ width: 22px;
+ text-indent: -9999px;
+}
+.lessen[disabled],.increase[disabled] {
+ cursor: default;
+}
+.lessen {
+ background-position: -220px -205px;
+}
+.lessen[disabled] {
+ background-position: -310px -205px;
+}
+.increase {
+ background-position: -265px -205px;
+}
+.increase[disabled] {
+ background-position: -355px -205px;
+}
+.browser-version,.contact-us {
+ bottom: 10px;
+ left: 190px;
+ line-height: 20px;
+ position: absolute;
+}
+.browser-version li,.contact-us li {
+ float: left;
+ margin-right: 40px;
+}
+.browser-version img,.contact-us img {
+ border-radius: 30px;
+}
+.browser-version {
+ bottom: 10px;
+ display: none;
+}
+#notice-settings label {
+ padding-right: 15px;
+}
+.theme {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 15px;
+  text-indent: -999999px;
+  -webkit-transition: box-shadow .2s;
+}
+.theme.alizarin {
+  background: #e74c3c;
+}
+.theme.amethyst {
+  background: #9b59b6;
+}
+.theme.concrete {
+  background: #95a5a6;
+}
+.theme.emerald {
+  background: #2ecc71;
+}
+.theme.river {
+  background: #3498db;
+}
+.theme.turquoise {
+  background: #1abc9c;
+}
+.theme.black {
+  background: #333;
+}
+.theme.default {
+  background: #FCE45C;
+}
+.theme.active {
+  box-shadow: 0px 0px 0px 2px rgba(255,255,255,1), 0px 1px 4px 2px rgba(0,0,0,.2);
+  /*box-shadow: 0px 0px 0px 2px rgba(0,0,0,.2);*/
+  /*border: 2px solid rgba(0,0,0,.3);*/
+}

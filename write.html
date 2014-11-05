@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="stylesheet" href="style/default/default.css">
+<link rel="stylesheet" href="style/default/write.css">
+</head>
+<body>
+
+<script type="text/template" id="template_write">
+<div class="com-ggd-write-wrap">
+  <div class="com-ggd-avater"></div>
+  <textarea class="com-ggd-text" name="status"></textarea>
+  <div class="com-ggd-emotions"></div>
+  <div class="com-ggd-plug">
+    <span class="com-ggd-picture">
+      <input name="pic" type="file" accept="image/gif, image/jpeg, image/png" />
+      <i class="com-ggd-icon"></i>
+      <i class="com-ggd-close"></i>
+    </span>
+    <!--<span class="com-ggd-link"></span>-->
+  </div>
+  <div class="com-ggd-post-action">
+    <button class="com-ggd-post">发布</button>
+    <div class="com-ggd-text-count">140</div>
+    <div class="com-ggd-emon iconfont"></div>
+  </div>
+  <div class="com-ggd-screenshot"><input type="checkbox" id="screenshot" name="screenshot" /><label for="screenshot">网页截图</label></div>
+  <!--<div class="com-ggd-cancel"></div>-->
+</div>
+</script>
+
+<script src="sea-modules/seajs/2.0.0/sea.js" data-config="./config" data-main="./gegedaa/write"></script>
+</body>
+</html>

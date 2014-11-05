@@ -1,0 +1,14 @@
+{
+	"appName": {
+		"message": "咯咯哒",
+		"description": "应用名称"
+	},
+	"appDescription": {
+		"message": "最好用的看微博、发微博工具，实时提醒，支持多帐号。",
+		"description": "app description"
+	},
+  "settingsPageTitle": {
+    "message": "设置咯咯哒",
+    "description": "settings page title"
+  }
+}

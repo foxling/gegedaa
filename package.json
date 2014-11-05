@@ -1,0 +1,21 @@
+{
+  "name": "gegedaa",
+  "version": "2.0.0",
+  "spm": {
+    "alias": {
+      "$": "jquery/jquery/2.0.3/jquery",
+      "_": "gallery/underscore/1.4.4/underscore",
+      "backbone": "gallery/backbone/1.0.0/backbone",
+      "blurjs": "gallery/blurjs/blur"
+    }
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cmd-transport": "~0.3.0",
+    "grunt-cmd-concat": "~0.2.5",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-string-replace": "~0.2.4"
+  }
+}

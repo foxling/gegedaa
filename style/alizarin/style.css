@@ -1,0 +1,16 @@
+nav a.active:hover {
+  color: #fff;
+}
+nav a,
+.app-nav-inner .back-nav .back-btn {
+  color: rgba(0,0,0,.3);
+}
+nav a:hover,
+.app-nav-inner .back-nav .back-btn:hover {
+  color: rgba(0,0,0,.5);
+}
+.app-nav-wrapper,
+.app-nav,
+.app-nav-inner .back-nav {
+  background: #e74c3c;
+}

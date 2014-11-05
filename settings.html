@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="stylesheet" href="style/default/default.css">
+<link rel="stylesheet" href="style/default/settings.css">
+</head>
+<body>
+  <div class="setting-menu">
+    <ul class="setting-nav">
+      <li class="general"><i class="selected-arr"></i><a href="#general">常规</a></li>
+      <li class="accounts-s"><i class="selected-arr"></i><a href="#accounts">帐号</a></li>
+      <li class="notifications"><i class="selected-arr"></i><a href="#notifications">提醒</a></li>
+    </ul>
+    <div class="about">
+      <img src="style/default/setting_logo.png" alt="" />
+      <i><span id="debug">&copy; 2013</span>, <a href="http://gegedaa.com">gegedaa.com</a></i>
+    </div>
+  </div>
+
+  <div class="setting-content">
+
+    <div id="basic-setting" class="setting-section" style="display:none" data-key="basic">
+      <h3>常规设置</h3>
+      <table class="form">
+        <tr>
+          <td>字体大小</td>
+          <td><select name="fontsize">
+              <option value="12px">12 px</option>
+              <option value="13px">13 px</option>
+              <option value="14px">14 px</option>
+              <option value="15px">15 px</option>
+              <option value="16px">16 px</option>
+            </select>
+          </td>
+        </tr>
+        <tr id="width-setting">
+          <td>宽度</td>
+          <td><div class="number-input"><button class="lessen">-</button><input class="number" name="windowwidth" type="text" /><button class="increase">+</button></div></td>
+        </tr>
+        <tr>
+          <td>平滑滚动</td>
+          <td>
+            <input name="smoothscroll" type="checkbox" id="smooth-scroll" value="1" />
+            <label for="smooth-scroll">开启</label>
+          </td>
+        </tr>
+        <tr>
+          <td>表情</td>
+          <td>
+            <input name="emotion" type="checkbox" id="emotion-setting">
+            <label for="emotion-setting">以图标方式展现 <span>(重启浏览器生效)</span></label>
+          </td>
+        </tr>
+        <tr>
+          <td>右键菜单分享</td>
+          <td>
+            <input name="menushare" type="checkbox" id="menu-share">
+            <label for="menu-share">浏览网页时，可用鼠标右键分享</label>
+          </td>
+        </tr>
+        <tr>
+          <td>主题</td>
+          <td>
+            <div class="theme default" data-name="default">default</div>
+            <div class="theme alizarin" data-name="alizarin">alizarin</div>
+            <div class="theme black" data-name="black">black</div>
+            <div class="theme amethyst" data-name="amethyst">amethyst</div>
+            <div class="theme concrete" data-name="concrete">concrete</div>
+            <div class="theme emerald" data-name="emerald">emerald</div>
+            <div class="theme river" data-name="river">river</div>
+            <div class="theme turquoise" data-name="turquoise">turquoise</div>
+            <input type="hidden" name="skin" >
+          </td>
+        </tr>
+        <!--
+        <tr>
+          <td>缩略图显示</td>
+          <td>
+            <div class="i-radio" data-name="pic">
+              <input type="radio" id="pic-left" name="pic" value="left"><label for="pic-left" class="pic-left"></label>
+              <input type="radio" id="pic-right" name="pic" value="right"><label for="pic-right" class="pic-right"></label>
+              <input type="radio" id="pic-big" name="pic" value="big"><label for="pic-big" class="pic-big"></label>
+              <input type="radio" id="pic-none" name="pic" value="none"><label for="pic-none" class="pic-none"></label>
+            </div>
+          </td>
+        </tr>-->
+      </table>
+    </div>
+
+    <div id="account-setting" class="setting-section" style="display:none">
+      <h3>帐号设置</h3>
+      <h4>添加帐号</h4>
+      <button class="acount-btn sina" data-platform="sina">新浪微博</button>
+      <!--button class="acount-btn qq" disable="true">腾讯微博(开发中)</button-->
+      <p class="tips" style="display:none"></p>
+      <ul class="acounts-list"></ul>
+      <!--<button class="save-btn">保存</button>-->
+    </div>
+
+
+    <div id="notice-settings" class="setting-section" data-key="notice" style="display:none">
+      <h3>提醒设置</h3>
+      <div class="acount-select">
+        <table class="form">
+          <tr>
+            <td><h4>选择帐号</h4></td>
+            <td>
+              <select name="userlist"></select>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="form">
+        <tr>
+          <td>新微博</td>
+          <td>
+            <label><input type="checkbox" name="home[badge]" value="1" /> 工具栏图标</label>
+            <label><input class="sound" type="checkbox" name="home[sound]" value="1" /> 声音</label>
+          </td>
+        </tr>
+        <tr>
+          <td>私信</td>
+          <td>
+            <label><input type="checkbox" name="dmessage[badge]" value="1" /> 工具栏图标</label>
+            <label><input class="sound" type="checkbox" name="dmessage[sound]" value="1" /> 声音</label>
+          </td>
+        </tr>
+        <tr>
+          <td>提到我</td>
+          <td>
+            <label><input type="checkbox" name="mentions[badge]" value="1" /> 工具栏图标</label>
+            <label><input class="sound" type="checkbox" name="mentions[sound]" value="1" /> 声音</label>
+          </td>
+        </tr>
+        <tr>
+          <td>评论</td>
+          <td>
+            <label><input type="checkbox" name="comments[badge]" value="1" /> 工具栏图标</label>
+            <label><input class="sound" type="checkbox" name="comments[sound]" value="1" /> 声音</label>
+          </td>
+        </tr>
+        <tr>
+          <td>粉丝</td>
+          <td>
+            <label><input type="checkbox" name="followers[badge]" value="1" /> 工具栏图标</label>
+            <label><input class="sound" type="checkbox" name="followers[sound]" value="1" /> 声音</label>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+  <ul class="contact-us">
+    <li>官方微博：<a href="http://weibo.com/gegedaa" class="sina" target="_blank">@咯咯哒</a></li>
+    <li>开发：<a href="http://weibo.com/foxling" target="_blank">@foxling</a></li>
+    <li>设计：<a href="http://weibo.com/tuotuo1020" target="_blank">@Keller_ZKOoo</a></li>
+  </ul>
+  <div id="browser-version" class="browser-version"></div>
+  <script src="sea-modules/seajs/2.0.0/sea.js" data-config="./config" data-main="./gegedaa/settings-main"></script>

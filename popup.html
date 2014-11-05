@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>gegedaa</title>
+<link rel="stylesheet" href="style/default/default.css">
+</head>
+
+<body>
+  <div id="app-body" class="app-body"></div>
+  <script id="_tpl_app_nav" type="text/template">
+    <header class="app-nav-wrapper">
+      <div class="app-nav-inner">
+        <div class="back-nav">
+          <div class="iconfont back-btn"></div>
+        </div>
+        <div class="app-nav">
+          <div class="head">
+            <img>
+          </div>
+          <div class="head-popup">
+            <div class="user">
+              <div class="avater"><img></div>
+              <span class="name"></span>
+              <i class="notice-pop"></i>
+            </div>
+            <div class="setting-wrap">
+              <a class="iconfont w-popup">&#xe012;</a>
+              <a class="iconfont w-fullscreen">&#xe003;</a>
+              <a class="iconfont setting">&#xe014;</a>
+            </div>
+          </div>
+          <nav class="main clearfix">
+            <a class="iconfont home" href="http://weibo.com"><i class="notice-pop">9</i></a>
+            <a class="iconfont mentions" href="http://weibo.com/box"><i class="notice-pop">9</i></a>
+            <!--a class="iconfont comments" href="#">&#xe03b;</a>
+            <a class="iconfont messages" href="#"></a>
+            <a class="iconfont favorite" href="#"></a-->
+            <a class="iconfont my-timeline" href="#"><i class="notice-pop">9</i></a>
+            <!--<a class="iconfont search" href="#"></a>-->
+          </nav>
+          <nav class="action">
+            <a class="iconfont new-post" href="#"></a>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </script>
+
+  <script id="_tpl_post_panel" type="text/template">
+    <div class="post-panel">
+      <div class="upload-pic"><div class="pic"></div><i class="remove">x</i></div>
+      <textarea class="text"></textarea>
+      <div class="emotions"></div>
+      <div class="plug">
+        <span class="item emon iconfont">&#xe016;</span>
+        <span class="item picture iconfont">&#xe017;<input name="pic" type="file" accept="image/gif, image/jpeg, image/png"></span>
+        <span class="item link iconfont">&#xe018;</span>
+      </div>
+      <div class="post-action">
+        <div class="text-count">140</div>
+        <button class="post">发布</button>
+      </div>
+      <i class="arr"></i>
+    </div>
+  </script>
+
+  <script id="_tpl_tab_menu" type="text/template">
+    <div class="tab-menu">
+      <div class="menu-inner">
+        <i class="arr"></i>
+        <select>
+          <option value="all">全部</option>
+        </select>
+      </div>
+    </div>
+  </script>
+
+  <script id="_tpl_mention_menu" type="text/template">
+    <div class="tab-menu">
+      <div class="menu-inner">
+        <a href="#" class="item">@我的微博<i class="notice"></i></a>
+        <a href="#" class="item">@我的评论<i class="notice"></i></a>
+        <a href="#" class="item">评论我的<i class="notice"></i></a>
+        <a href="#" class="item">我的评论<i class="notice"></i></a>
+        <a href="#" class="item">私信<i class="notice"></i></a>
+      </div>
+    </div>
+  </script>
+
+  <script id="_tpl_status" type="text/template">
+    <div class="w-item">
+      <div class="w-item-avatar">
+        <a class="rt user-show" href="#" target="_blank"><img></a>
+        <a class="source user-show" href="#" target="_blank"><img></a>
+      </div>
+      <div class="w-item-header">
+        <a class="location iconfont" target="_blank">&#xe020;</a>
+        <a href="#" class="owner-name" target="_blank"></a>
+        <span class="verified"></span>
+        <a class="time bg-link" target="_blank"></a>
+        <span class="from">来自</span><span class="weibo-source"></span>
+      </div>
+      <div class="w-item-content clearfix">
+        <p class="text"></p>
+      </div>
+      <div class="w-item-action">
+        <a href="#" class="favorite"><i class="iconfont">&#xe00e;</i></a>
+        <a href="#" class="like"><i class="iconfont">&#xe002;</i><i class="num"></i></a>
+        <a href="#" class="retweet"><i class="iconfont">&#xe004;</i><i class="num"></i></a>
+        <a href="#" class="comments"><i class="iconfont">&#xe005;</i><i class="num"></i></a>
+      </div>
+    </div>
+  </script>
+
+  <script id="_tpl_status_comment_post" type="text/template">
+    <div class="comment-post-box">
+      <div class="comment-post-box-inner">
+        <div class="comment-post-body">
+          <div class="u-picture"><img></div>
+          <div class="textarea-wrapper"><textarea class="comment-text"></textarea></div>
+          <i class="counter">140</i>
+        </div>
+        <div class="comment-post-action">
+          <span class="emon iconfont">&#xe016;</span>
+          <label class="both"><input name="rt" type="checkbox"> 同时<span class="action-name">转发</span></label>
+          <label class="origin"><input name="origin" type="checkbox"> 评论原微博</label>
+          <button class="comment-post-btn">评论</button>
+          <div class="emotions"></div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script id="_tpl_status_comments" type="text/template">
+    <div class="status-comment-list" style="display: block;">
+
+      <div class="comments">
+
+      </div>
+      <div class="comments-pages clearfix"><a href="#" class="more">更多...</a><a href="#" class="close">收起</a></div>
+    </div>
+  </script>
+
+  <script id="_tpl_status_comment" type="text/template">
+    <div class="comment" data-id="%id%">
+      <div class="c-picture"><a class="user-show" href="%userlink%" data-name="%username%"><img src="%userimage%"></a></div>
+      <div class="c-text">
+        <div class="c-name"><a class="user-show" href="%userlink%" data-name="%username%">%username%</a><i class="time bg-link">%time%</i></div>
+        <span class="text">%text%</span>
+      </div>
+      %reply%
+      %delete%
+    </div>
+  </script>
+
+  <script id="_tpl_comment" type="text/template">
+    <div class="comment-item clearfix" data-id="%id%">
+      <a class="user-show" href="%userlink%" data-name="%username%"><img src="%userimage%"></a>
+      <div class="content">
+        <div class="summary"><div class="summary-content">%summary%</div><i class="time bg-link">%time%</i></div>
+        <div class="text">%text%</div>
+      </div>
+      %reply%
+      %delete%
+    </div>
+  </script>
+
+  <script type="text/template" id="template_image_viewer">
+    <div class="img scroller"></div>
+    <div class="left"></div><div class="right"></div>
+    <a class="original" target="_blank" title="打开原图"></a>
+    <a class="save" target="_blank" title="保存"></a>
+  </script>
+
+  <script type="text/template" id="template_profile_header">
+    <div class="profile-wrap">
+      <div class="avater">
+          <img src="http://tp1.sinaimg.cn/1627825392/180/40012599082/0">
+      </div>
+      <div class="info">
+        <ul>
+          <li class="p-name"><span class="name"></span><i class="v-personal" style="display: none;"></i></li>
+          <li class="p-bio"></li>
+          <li class="p-info"><i class="gender"></i><i class="location" data-icon="&#xe020;"></i><!--<i class="education" data-icon="&#xe001;"></i><i class="company" data-icon="&#xe000;"></i>--></li>
+        </ul>
+      </div>
+      <div class="state">
+        <div class="state-inner">
+          <ul class="clearfix">
+            <li><a href="#" class="p-weibo"><strong>71</strong> 微博</a></li>
+            <li><a href="#" class="p-following"><strong>43</strong> 关注</a></li>
+            <li><a href="#" class="p-followers"><strong>55555909</strong> 粉丝<i class="notice"></i></a></li>
+            <li><a href="#" class="p-fav"><strong>403</strong> 收藏</a></li>
+          </ul>
+          <a class="follow"></a>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="_template_user_item">
+    <div class="user-item">
+      <a href="#" class="user-name"></a>
+      <a href="#" class="user-image user-show"><img></a>
+      <div class="friends-state">
+        <span>微博</span><span class="statuses-count"></span>
+        <i>|</i>
+        <span>关注</span><span class="friends-count"></span>
+        <i>|</i>
+        <span>粉丝</span><span class="followers-count"></span>
+      </div>
+      <a href="#" class="follow-button"></a>
+    </div>
+  </script>
+
+  <script src="sea-modules/seajs/2.0.0/sea.js" data-config="./config" data-main="./gegedaa/main"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+	"appName": {
+		"message": "gegedaa",
+		"description": "app name"
+	},
+	"appDescription": {
+		"message": "weibo.com extension",
+		"description": "app description"
+	},
+  "settingsPageTitle": {
+    "message": "Settings",
+    "description": "settings page title"
+  }
+}
