@@ -424,13 +424,20 @@ define(function(require) {
   function newVersionNotice(){
     var notice = localStorage['NewVersionNotice'];
     if ( !notice || notice < '2.0.5' ) {
-      var notification = webkitNotifications.createNotification(
-        'http://gegedaa.b0.upaiyun.com/icons/48.png',
-        '更新',
-        '咯咯哒更新至 2.0.5 版本'
-      );
-      notification.show();
-      localStorage['NewVersionNotice'] = '2.0.5';
+      var notification, title='更新', message = '咯咯哒更新至 2.0.5 版本', icon = 'http://gegedaa.b0.upaiyun.com/icons/48.png';
+      if (root.webkitNotifications) {
+        notification = root.webkitNotifications.createNotification(
+          icon,
+          title,
+          message
+        );
+        notification.show();
+      } else if (root.Notification) {
+        notification = new Notification(title, {body: message, icon:icon});
+      }
+      if (notification) {
+        localStorage['NewVersionNotice'] = '2.0.5';
+      }
     }
   }
 
