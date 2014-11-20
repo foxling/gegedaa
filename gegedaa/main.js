@@ -134,12 +134,16 @@ define(function(require) {
     }
   });
 
-  $win.on('beforeunload', function(e){
-    bg.console.info('window beforeunload');
+
+  var unloaded, unloadfun = function(e){
+    if (unloaded) return;
+    unloaded = true;
+    bg.console.info('window ' + e.name);
     app.remove();
     app = null;
     $win.off();
-  }).on('error', function(e){
+  };
+  $win.on('unload', unloadfun).on('beforeunload', unloadfun).on('error', function(e){
     bg.location.reload();
   });
   bg.console.info('window events binded');
